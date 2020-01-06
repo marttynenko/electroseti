@@ -1,0 +1,207 @@
+<div id="popup-register" class="white-popup wide popup-register zoom-anim-dialog">
+  <div class="popup-inner">
+    <div class="popup-register-head">
+      <div class="white-popup-title lefted">Регистрация</div>
+      <div class="popup-register-tabs">
+        <a href="#tab-fiz">Физическое лицо</a>
+        <a href="#tab-jur">Юридичесоке лицо</a>
+      </div>
+    </div>
+
+    <div id="tab-fiz">
+      <form action="#" id="popup_register_fiz" novalidate>
+      <div class="white-popup-fields">
+        
+        <div class="row">
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="text" name="f_name" placeholder="Имя">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="text" name="f_email" placeholder="E-mail">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="password" name="f_pass" id="f_pass" placeholder="Пароль">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="password" name="f_pass_confirm" placeholder="Подтверждение пароля">
+            </div>
+          </div>
+        </div><!--.row-->
+
+      </div><!--.fields-->
+
+      <div class="popup-register-btns row valign-baseline align-justify">
+        <div class="flx-6 flx-x-12">
+          <label for="f_agree" class="label-styler label-agree">
+            <input type="checkbox" name="f_agree" id="f_agree" checked>
+            <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+          </label>
+        </div>
+        <div class="flx-6 flx-x-12">
+          <button class="btn btn-secondary btn-block">Регистрация</button>
+        </div>
+      </div>
+      </form>
+    </div><!--tab-fiz-->
+
+    <div id="tab-jur">
+      <form action="#" id="popup_register_jur" novalidate>
+      <div class="white-popup-fields">
+        
+        <div class="row">
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="text" name="f_company" placeholder="Название компании">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="text" name="f_inn" placeholder="ИНН/КПП">
+            </div>
+          </div>
+
+          <div class="flx-12">
+            <div class="field">
+              <input type="text" name="f_jur_adr" placeholder="Юридический адрес">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="text" name="f_person" placeholder="* Контактное лицо">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="text" name="f_email" placeholder="* E-mail">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="tel" class="mask-phone" name="f_phone" placeholder="Телефон">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="tel" name="f_delivey_adr" placeholder="* Адрес доставки">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="password" name="f_pass_j" id="f_pass_j" placeholder="Пароль">
+            </div>
+          </div>
+
+          <div class="flx-6 flx-x-12">
+            <div class="field">
+              <input type="password" name="f_pass_confirm" placeholder="Подтверждение пароля">
+            </div>
+          </div>
+        </div><!--.row-->
+
+      </div><!--.fields-->
+
+      <div class="popup-register-btns row valign-baseline align-justify">
+        <div class="flx-6 flx-x-12">
+          <label for="f_agree_jur" class="label-styler label-agree">
+            <input type="checkbox" name="f_agree_jur" id="f_agree_jur" checked>
+            <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+          </label>
+        </div>
+        <div class="flx-6 flx-x-12">
+          <button class="btn btn-secondary btn-block">Регистрация</button>
+        </div>
+      </div>
+      </form>
+    </div><!--tab-jur-->
+
+
+  </div>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+    //стилизация элементов форм
+    $('.white-popup input[type="checkbox"], .white-popup  input[type="radio"], .white-popup input[type="file"], .white-popup select').styler({
+      singleSelectzIndex: '1',
+    });
+
+    $('.white-popup .mask-phone').mask("+7 (999)-999-99-99");
+
+    $('.popup-register-tabs a').tabs();
+
+
+    $("#popup_register_fiz").validate({
+      rules: {
+        f_name: {
+          required: true,
+          lettersonly: true
+        },
+        f_email: {
+          required: true,
+          email: true
+        },
+        f_pass: {
+          required: true,
+          minlength: 6
+        },
+        f_pass_confirm: {
+          required: true,
+          minlength: 6,
+          equalTo: "#f_pass"
+        }
+      },
+      submitHandler: function(){
+        //сабмит формы
+        showSuccessPopup();
+      }
+    });
+
+    $("#popup_register_jur").validate({
+      rules: {
+        f_person: {
+          required: true,
+        },
+        f_email: {
+          required: true,
+          email: true
+        },
+        f_phone: {
+          telephone: true
+        },
+        f_delivey_adr: {
+          required: true
+        },
+        f_pass_j: {
+          required: true,
+          minlength: 6
+        },
+        f_pass_confirm: {
+          required: true,
+          minlength: 6,
+          equalTo: "#f_pass_j"
+        }
+      },
+      submitHandler: function(){
+        //сабмит формы
+        showSuccessPopup();
+      }
+    });
+
+  });
+</script>
+</div>

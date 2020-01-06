@@ -1,0 +1,51 @@
+<div id="popup-pending" class="white-popup popup-pending zoom-anim-dialog">
+  <div class="popup-inner">
+    <div class="white-popup-title">Уведомить о поступлении товара</div>
+    <form action="#" id="popup-pending-form" novalidate>
+      
+      <div class="white-popup-fields">
+        
+        <div class="field">
+          <input type="text" name="f_emial" placeholder="E-mail">
+        </div>
+        
+        <label for="f_agree" class="label-styler label-agree">
+          <input type="checkbox" name="f_agree" id="f_agree" checked>
+          <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+        </label>
+
+      </div>
+     
+      <div class="popup-pending-btns centered">
+        <button class="btn btn-block">Уведомить</button>
+      </div>
+    </form>
+  </div>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+    //стилизация элементов форм
+    $('.white-popup input[type="checkbox"], .white-popup  input[type="radio"], .white-popup input[type="file"], .white-popup select').styler({
+      singleSelectzIndex: '1',
+    });
+
+
+    $("#popup-pending-form").validate({
+      rules: {
+        f_email: {
+          required: true,
+          email: true
+        },
+        f_agree: {
+          required: true,
+        }
+      },
+      submitHandler: function(){
+        //сабмит формы
+        showSuccessPopup();
+      }
+    });
+
+  });
+</script>
+</div>

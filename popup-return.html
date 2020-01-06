@@ -1,0 +1,97 @@
+<div id="popup-return" class="white-popup wide popup-return zoom-anim-dialog">
+  <div class="popup-inner">
+    
+    <div class="white-popup-title lefted">Возврат</div>
+  
+
+    <form action="#" id="popup_return_form" novalidate>
+    <div class="white-popup-fields">
+      
+      <div class="row">
+        <div class="flx-6 flx-x-12">
+          <div class="field">
+            <input type="text" name="f_company" placeholder="* Имя/название компании">
+          </div>
+
+          <div class="field">
+            <input type="tel" class="mask-phone" name="f_phone" placeholder="Телефон для связи">
+          </div>
+
+          <div class="field">
+            <input type="text" name="f_account" placeholder="* Номер аккаунта">
+          </div>
+
+          <div class="field">
+            <input type="text" name="f_order" placeholder="Номер заказа">
+          </div>
+        </div>
+
+        <div class="flx-6 flx-x-12">
+          <div class="field">
+            <input type="text" name="f_email" placeholder="* Электронная почта">
+          </div>
+
+          <div class="field">
+            <textarea name="f_msg" id="f_msg" rows="7" placeholder="Описание проблемы"></textarea>
+          </div>
+        </div>
+
+      </div><!--.row-->
+
+      <input type="file" name="f_file" id="f_file" data-placeholder="Прикрепить файл (фото, сканы)">
+
+    </div><!--.fields-->
+
+    <div class="popup-return-btns row valign-baseline align-justify">
+      <div class="flx-6 flx-x-12">
+        <label for="f_agree" class="label-styler label-agree">
+          <input type="checkbox" name="f_agree" id="f_agree" checked>
+          <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+        </label>
+      </div>
+      <div class="flx-6 flx-x-12">
+        <button class="btn btn-block">Отправить</button>
+      </div>
+    </div>
+    </form>
+
+  </div>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+    //стилизация элементов форм
+    $('.white-popup input[type="checkbox"], .white-popup  input[type="radio"], .white-popup input[type="file"], .white-popup select').styler({
+      singleSelectzIndex: '1',
+    });
+
+    $('.white-popup .mask-phone').mask("+7 (999)-999-99-99");
+
+
+    $("#popup_return_form").validate({
+      rules: {
+        f_company: {
+          required: true,
+        },
+        f_email: {
+          required: true,
+          email: true
+        },
+        f_phone: {
+          telephone: true
+        },
+        f_account: {
+          required: true
+        },
+        f_agree: {
+          required: true
+        }
+      },
+      submitHandler: function(){
+        //сабмит формы
+        showSuccessPopup();
+      }
+    });
+
+  });
+</script>
+</div>

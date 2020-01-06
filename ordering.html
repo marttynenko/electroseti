@@ -1,0 +1,331 @@
+<!--#include file="header.html"-->
+<!--#include file="breadcrumbs.html"-->
+
+<h1 class="page-title" data-shadow="Оформление">Оформление заказа</h1>
+
+<div class="ordering-topline">
+	<div class="flex align-justify valign-center">
+		<div class="ordering-topline-totals flex">
+			<div class="ordering-topline-col">
+				<div class="ordering-topline-label">Сумма</div>
+				<div class="ordering-topline-summ">4 945 руб</div>
+			</div>
+			<div class="ordering-topline-col">
+				<div class="ordering-topline-label">Доставка</div>
+				<div class="ordering-topline-summ">0 руб</div>
+			</div>
+			<div class="ordering-topline-col">
+				<div class="ordering-topline-label">Персональная скидка</div>
+				<div class="ordering-topline-summ">5% - 600 руб</div>
+			</div>
+			<div class="ordering-topline-col">
+				<div class="ordering-topline-label total">итого</div>
+				<div class="ordering-topline-summ total">4 945 руб</div>
+			</div>
+		</div><!--.totals-->
+
+		<a href="#" class="btn to-first-ordering-block">Оформить заказ</a>
+	</div>
+</div><!--.topline-->
+
+<div class="ordering-block">
+	<div class="ordering-block-title"><div class="ordering-block-title-step">01</div>Товары в заказе</div>
+
+	<div class="pr-list-headers flex">
+		<div class="ordering-col-articule">
+			<span>Артикул</span>
+		</div>
+		<div class="ordering-col-title">
+			<span>Название</span>
+		</div>
+		<div class="ordering-col-price">
+			<span>Цена</span>
+		</div>
+		<div class="ordering-col-manufacter">
+			<span>Производитель</span>
+		</div>
+		<div class="ordering-col-amount">
+			<span>Кол-во</span>
+		</div>
+		<div class="ordering-col-summ">
+			<span>Сумма</span>
+		</div>
+	</div><!--.headers-->
+
+	<div class="ordering-goods-list">
+		<div class="pr-item flex valign-center">
+			<div class="ordering-col-articule">24355971</div>
+
+			<div class="ordering-col-title">
+				<div class="pr-item-product flex valign-center">
+					<div class="pr-item-product-img"><a href="#"><img src="https://via.placeholder.com/40x40" data-zoom="https://via.placeholder.com/120x120" alt="alt"></a></div>
+					<div class="pr-item-product-title"><a href="#">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</a></div>
+				</div>
+			</div>
+
+			<div class="ordering-col-price">
+				<div class="pr-item-oldprice">6 357 руб.</div>
+				<div class="pr-item-price">5 999 руб.</div>
+			</div>
+
+			<div class="ordering-col-manufacter"><a href="#" class="pr-item-manufacter">Производитель</a></div>
+
+			<div class="ordering-col-amount">124 шт.</div>
+
+			<div class="ordering-col-summ">12 981 руб.</div>
+		</div>
+	</div><!--.ordering-goods-list-->
+
+	<div class="ordering-block-nav flex align-justify">
+		<div></div>
+		<a href="#" class="ordering-block-nav-next">
+			<svg class="sprite svg-nav-next">
+			  <use xlink:href="svg/svg/symbols.svg#arrow-next"/>
+			</svg>
+			<span>Вперед</span>
+		</a>
+	</div>
+</div><!--.ordering-block-->
+
+
+<div class="ordering-block">
+	<div class="ordering-block-title"><div class="ordering-block-title-step">02</div>Регион доставки</div>
+
+	<div class="field">
+		<div class="label-block">Тип плательщика</div>
+
+		<label for="f_customer_type_1" class="label-styler">
+			<input type="radio" name="f_customer_type" id="f_customer_type_1" data-entity="individual">
+			<span>Физическое лицо</span>
+		</label>
+
+		<label for="f_customer_type_2" class="label-styler">
+			<input type="radio" name="f_customer_type" id="f_customer_type_2" data-entity="legal">
+			<span>Юридическое лицо</span>
+		</label>
+	</div>
+
+	<div class="row">
+		<div class="flx-7 flx-x-12">
+			<div class="field">
+				<label for="f_location" class="label-block">Местоположение*</label>
+				<input type="text" required name="f_location">
+				<div class="field-hint">Выберите свой город в списке. <br>Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"</div>
+			</div>
+		</div>
+		<div class="flx-5 flx-x-12">
+			<div class="field">
+				<label for="f_post_index" class="label-block">Индекс*</label>
+				<input type="text" required name="f_post_index">
+			</div>
+		</div>
+	</div>
+
+	<div class="ordering-block-nav flex align-justify">
+		<a href="#" class="ordering-block-nav-prev">
+			<svg class="sprite svg-nav-prev">
+			  <use xlink:href="svg/svg/symbols.svg#arrow-prev"/>
+			</svg>
+			<span>Назад</span>
+		</a>
+		<a href="#" class="ordering-block-nav-next">
+			<svg class="sprite svg-nav-next">
+			  <use xlink:href="svg/svg/symbols.svg#arrow-next"/>
+			</svg>
+			<span>Вперед</span>
+		</a>
+	</div>
+</div><!--.ordering-block-->
+
+
+<div class="ordering-block">
+	<div class="ordering-block-title"><div class="ordering-block-title-step">03</div>Доставка</div>
+
+	<div class="row">
+		<div class="flx-8 flx-m-12">
+			<div class="row row-delivery">
+				<div class="flx-4 flx-x-6 flx-u-12">
+					<label for="f_delivery_1" class="label-delivery">
+						<input type="radio" name="f_delivery" id="f_delivery_1" data-price="500 руб" data-title="Доставка курьером" data-hint="Доставка осуществляется в течении дня в удобное для вас время">
+						<span class="label-delivery-txt">Доставка в другие регионы</span>
+						<span class="label-delivery-icon">
+							<svg class="sprite svg-delivery-icon">
+							  <use xlink:href="svg/svg/symbols.svg#delivery-region"/>
+							</svg>
+						</span>
+					</label>
+					<div class="label-delivery-hint">Транспортной компанией</div>
+				</div>
+
+				<div class="flx-4 flx-x-6 flx-u-12">
+					<label for="f_delivery_2" class="label-delivery">
+						<input type="radio" name="f_delivery" id="f_delivery_2" data-price="100 руб" data-title="Доставка курьером по Москве и МО" data-hint="Доставка осуществляется в течении дня в удобное для вас время">
+						<span class="label-delivery-txt">Доставка по Москве и МО</span>
+						<span class="label-delivery-icon">
+							<svg class="sprite svg-delivery-icon">
+							  <use xlink:href="svg/svg/symbols.svg#delivery-moscow"/>
+							</svg>
+						</span>
+					</label>
+					<div class="label-delivery-hint">Доставка по Москве и МО</div>
+				</div>
+
+				<div class="flx-4 flx-x-6 flx-u-12">
+					<label for="f_delivery_3" class="label-delivery">
+						<input type="radio" name="f_delivery" id="f_delivery_3" data-price="Бесплатно" data-title="Самовывоз" data-hint="Вы сможете забрать товар в любое удобное время с одного из нащих складов">
+						<span class="label-delivery-txt">Самовывоз</span>
+						<span class="label-delivery-icon">
+							<svg class="sprite svg-delivery-icon">
+							  <use xlink:href="svg/svg/symbols.svg#delivery-samo"/>
+							</svg>
+						</span>
+					</label>
+					<div class="label-delivery-hint">Транспортной компанией</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="flx-4 flx-m-12">
+			<div class="delivery-total-wrap righted">
+				<div class="delivery-total">
+					<div class="delivery-total-timly">Выберите тип доставки товаров</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ordering-block-nav flex align-justify">
+		<a href="#" class="ordering-block-nav-prev">
+			<svg class="sprite svg-nav-prev">
+			  <use xlink:href="svg/svg/symbols.svg#arrow-prev"/>
+			</svg>
+			<span>Назад</span>
+		</a>
+		<a href="#" class="ordering-block-nav-next">
+			<svg class="sprite svg-nav-next">
+			  <use xlink:href="svg/svg/symbols.svg#arrow-next"/>
+			</svg>
+			<span>Вперед</span>
+		</a>
+	</div>
+</div><!--.ordering-block-->
+
+
+<div class="ordering-block">
+	<div class="ordering-block-title"><div class="ordering-block-title-step">04</div>Оплата</div>
+
+	
+	<div class="payment-methods">
+		<div class="label-block">Выберите способ оплаты</div>
+		<label for="f_payment_1" class="label-styler inline">
+			<input type="radio" name="f_payment" id="f_payment_1">
+			<span>Яндекс.Деньги</span>
+		</label>
+		<label for="f_payment_2" class="label-styler inline">
+			<input type="radio" name="f_payment" id="f_payment_2">
+			<span>Терминалы</span>
+		</label>
+		<label for="f_payment_3" class="label-styler inline">
+			<input type="radio" name="f_payment" id="f_payment_3">
+			<span>Наличными курьеру</span>
+		</label>
+		<label for="f_payment_4" class="label-styler inline">
+			<input type="radio" name="f_payment" id="f_payment_4">
+			<span>Сбербанку</span>
+		</label>
+		<label for="f_payment_5" class="label-styler inline">
+			<input type="radio" name="f_payment" id="f_payment_5">
+			<span>Банковские карты</span>
+		</label>
+	</div>
+
+	<div class="ordering-block-nav flex align-justify">
+		<a href="#" class="ordering-block-nav-prev">
+			<svg class="sprite svg-nav-prev">
+			  <use xlink:href="svg/svg/symbols.svg#arrow-prev"/>
+			</svg>
+			<span>Назад</span>
+		</a>
+		<a href="#" class="ordering-block-nav-next">
+			<svg class="sprite svg-nav-next">
+			  <use xlink:href="svg/svg/symbols.svg#arrow-next"/>
+			</svg>
+			<span>Вперед</span>
+		</a>
+	</div>
+</div><!--.ordering-block-->
+
+<div class="ordering-block">
+	<div class="ordering-block-title"><div class="ordering-block-title-step">05</div>Данные получателя</div>
+
+	<div class="ordering-data">
+		<div class="ordering-data-entity" data-entity="individual">
+			<div class="row">
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="text" placeholder="Фамилия Имя"></div>
+				</div>
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="text" placeholder="E-mail"></div>
+				</div>
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="text" placeholder="Телефон"></div>
+				</div>
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="text" placeholder="Адрес доставки"></div>
+				</div>
+			</div>
+			<div class="ordering-agree">
+				<label for="f_agree" class="label-styler">
+					<input type="checkbox" name="f_agree" id="f_agree" checked>
+					<span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+				</label>
+			</div>
+		</div><!--.entity-->
+
+		<div class="ordering-data-entity" data-entity="legal">
+			<div class="row">
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="text" placeholder="Название компании"></div>
+				</div>
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="text" placeholder="ИНН/КПП"></div>
+				</div>
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="text" placeholder="Контактное лицо"></div>
+				</div>
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="email" placeholder="E-mail"></div>
+				</div>
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="tel" class="mask-phone" placeholder="Телефон"></div>
+				</div>
+				<div class="flx-6 flx-u-12">
+					<div class="field"><input type="text" placeholder="Адрес доставки"></div>
+				</div>
+			</div>
+			<div class="ordering-agree">
+				<label for="f_agree_2" class="label-styler">
+					<input type="checkbox" name="f_agree_2" id="f_agree_2" checked>
+					<span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+				</label>
+			</div>
+		</div><!--.entity-->
+	</div><!--.ordering-data-->
+	
+
+	<div class="ordering-block-nav flex align-justify">
+		<a href="#" class="ordering-block-nav-prev">
+			<svg class="sprite svg-nav-prev">
+			  <use xlink:href="svg/svg/symbols.svg#arrow-prev"/>
+			</svg>
+			<span>Назад</span>
+		</a>
+		<span></span>
+	</div>
+</div><!--.ordering-block-->
+
+<div class="ordering-submit righted">
+	<button class="btn">Оформить заказ</button>
+</div>
+
+<!--#include file="footer.html"-->

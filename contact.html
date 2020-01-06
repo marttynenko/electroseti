@@ -1,0 +1,84 @@
+<!--#include file="header.html"-->
+<!--#include file="breadcrumbs.html"-->
+
+<h1 class="page-title" data-shadow="Контакты">Контакты</h1>
+
+<div class="contacts">
+	<div class="row">
+		<div class="flx-5 flx-m-12">
+			<div class="contacts-about">
+				<p>В нашем магазине всегда только самые лучшие товары по низким ценам. Склад с постоянным остатком, более 15000 складских позиций. Ведущий оптовый поставщик кабельной, электро- и светотехнической продукции российского и зарубежного производства, успешно работающий на рынке с 1993 года.</p>
+			</div>
+			<div class="contacts-plate">
+				<span>
+					<svg class="sprite svg-contacts-icon svg-inline">
+					  <use xlink:href="svg/svg/symbols.svg#contact-pin"/>
+					</svg>
+					МО, г. Видное Северная промзона, корпус №50
+				</span>
+			</div>
+			<div class="contacts-plate">
+				<span>
+					<svg class="sprite svg-contacts-icon svg-inline">
+					  <use xlink:href="svg/svg/symbols.svg#contact-phone"/>
+					</svg>
+					8-495-926-30-07
+				</span>
+				<span>
+					<svg class="sprite svg-contacts-icon svg-inline">
+					  <use xlink:href="svg/svg/symbols.svg#contact-mail"/>
+					</svg>
+					sale@electroset.ru
+				</span>
+			</div>
+		</div>
+
+		<div class="flx-7 flx-m-12">
+			<div class="contacts-scheme"><a href="#" download>Скачать схему проезда</a></div>
+			<div class="contacts-map" id="contacts-map"></div>
+			<script>
+		  window.onload = function(){
+		    var script = document.createElement('script');
+		    script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+		    document.body.appendChild(script);
+
+		    script.onload = function(){
+		      ymaps.ready(function () {
+		      var myMap = new ymaps.Map("contacts-map", {
+		        center: [55.565325, 37.753676],
+		        zoom: 15,
+		        controls: ['zoomControl', 'typeSelector']
+		      });
+
+
+		      pin = new ymaps.Placemark(myMap.getCenter(), {
+		        hintContent: 'Адрес или какая-либо подсказка',
+		      });
+		      myMap.geoObjects.add(pin);
+		      
+
+		      //отрубаем скролл карты мышью
+		      myMap.behaviors.disable('scrollZoom');
+		      // myMap.behaviors.disable('drag');
+
+		      myMap.container.events.add('fullscreenenter', function(){
+		        myMap.behaviors.enable(['scrollZoom']);
+		      });
+		      myMap.container.events.add('fullscreenexit', function(){
+		        myMap.behaviors.disable(['scrollZoom']);
+		      });
+		    });
+		    }
+		  }
+		  </script>
+			<div class="contacts-adres">
+				<div class="h3">Вы можете нас найти</div>
+				<p><strong>Координаты для навигатора</strong> - 55.565325, 37.753676</p>
+				<p><strong>Яндекс-карты</strong> - Проектируемый проезд №253, 50</p>
+				<p><strong>iphone/ipad стандартные карты</strong> - ул.Северная промзона</p>
+			</div>
+		</div>
+	</div>
+</div><!--.contacts-->
+
+<!--#include file="footer.html"-->

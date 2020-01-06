@@ -1,0 +1,82 @@
+<div id="popup-review" class="white-popup wide popup-review zoom-anim-dialog">
+  <div class="popup-inner">
+    
+    <div class="white-popup-title lefted">Оставить отзыв</div>
+  
+
+    <form action="#" id="popup_review_form" novalidate>
+    <div class="white-popup-fields">
+      
+      <div class="row">
+        <div class="flx-6 flx-x-12">
+          <div class="field">
+            <input type="text" name="f_company" placeholder="Имя/название компании">
+          </div>
+        </div>
+
+        <div class="flx-6 flx-x-12">
+          <div class="field">
+            <input type="email" name="f_email" placeholder="Электронная почта">
+          </div>
+        </div>
+
+        <div class="flx-12">
+          <div class="field">
+            <textarea name="f_msg" id="f_msg" rows="7" placeholder="Описание проблемы"></textarea>
+          </div>
+        </div>
+
+      </div><!--.row-->
+
+      <input type="file" name="f_file" id="f_file" data-placeholder="Приложить файл отзыва">
+
+    </div><!--.fields-->
+
+    <div class="popup-review-btns row valign-baseline align-justify">
+      <div class="flx-6 flx-x-12">
+        <label for="f_agree" class="label-styler label-agree">
+          <input type="checkbox" name="f_agree" id="f_agree" checked>
+          <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+        </label>
+      </div>
+      <div class="flx-6 flx-x-12">
+        <button class="btn btn-block">Отправить отзыв</button>
+      </div>
+    </div>
+    </form>
+
+  </div>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+    //стилизация элементов форм
+    $('.white-popup input[type="checkbox"], .white-popup  input[type="radio"], .white-popup input[type="file"], .white-popup select').styler({
+      singleSelectzIndex: '1',
+    });
+
+
+    $("#popup_review_form").validate({
+      rules: {
+        f_company: {
+          required: true,
+        },
+        f_email: {
+          required: true,
+          email: true
+        },
+        f_msg: {
+          required: true
+        },
+        f_agree: {
+          required: true
+        }
+      },
+      submitHandler: function(){
+        //сабмит формы
+        showSuccessPopup();
+      }
+    });
+
+  });
+</script>
+</div>

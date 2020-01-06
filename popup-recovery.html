@@ -1,0 +1,42 @@
+<div id="popup-recovery" class="white-popup popup-recovery zoom-anim-dialog">
+  <div class="popup-inner">
+    <div class="white-popup-title">Восстановление пароля</div>
+    <form action="#" id="popup-recovery-form" novalidate>
+      
+      <div class="white-popup-fields">
+        
+        <div class="field">
+          <input type="text" name="f_email" placeholder="E-mail, указанный при регистрации">
+        </div>
+      </div>
+     
+      <div class="popup-recovery-btns centered">
+        <button class="btn btn-block">Восстановить пароль</button>
+      </div>
+    </form>
+  </div>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+    //стилизация элементов форм
+    $('.white-popup input[type="checkbox"], .white-popup  input[type="radio"], .white-popup input[type="file"], .white-popup select').styler({
+      singleSelectzIndex: '1',
+    });
+
+
+    $("#popup-recovery-form").validate({
+      rules: {
+        f_email: {
+          required: true,
+          lettersonly: true
+        }
+      },
+      submitHandler: function(){
+        //сабмит формы
+        showSuccessPopup();
+      }
+    });
+
+  });
+</script>
+</div>
